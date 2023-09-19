@@ -1,0 +1,62 @@
+@use './utils.scss' as *;
+
+.banner {
+  max-width: 1240px;
+  height: 223px;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 48px;
+  background-position: center center;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  @include mobile {
+    height: 111px;
+    font-size: 24px;
+    text-align: left;
+    padding: 0 100px 0 16px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    border-radius: inherit;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 100%;
+    @include mobile {
+      left: 16px;
+      width: 65%;
+      transform: translate(0, -50%);
+    }
+  }
+  &--home {
+    background-image: url('../assets/images/banner-home.jpg');
+    &:after {
+      content: 'Chez vous, partout et ailleurs';
+      @include mobile {
+        content: 'Chez vous,                            partout et ailleurs';
+        white-space: pre-wrap;
+      }
+      @media (max-width: 375px) {
+        width: 80%;
+      }
+    }
+  }
+  &--about{
+    background-image: url('../assets/images/banner-about.jpg');
+
+  }
+}

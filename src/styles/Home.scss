@@ -1,0 +1,16 @@
+@use './utils.scss' as *;
+
+#apartsContainer {
+  border-radius: 25px;
+  background: #F6F6F6;
+  padding: 56px 50px 0 50px;
+  margin: 45px 0px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  @include mobile {
+    background-color: none;
+    padding: 0 0;
+    margin: 22px 0 27px;
+  }
+}
