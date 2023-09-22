@@ -1,10 +1,11 @@
 import { PropTypes } from 'prop-types';
+import '../styles/Dropdown.scss';
 
-export function Dropdown({ title, content }) {
+export function Dropdown({ size, title, content }) {
   const items = [].concat(content);
   return (
-    <div>
-      <div className="title">
+    <div className={screen.availWidth > 650 ? `dropdown dropdown_${size}` : 'dropdown dropdown_small'}>
+      <div className="dropdown-title">
         <span>{title}</span>
         <svg
           width="24"
@@ -19,7 +20,7 @@ export function Dropdown({ title, content }) {
           />
         </svg>
       </div>
-      <div>
+      <div className='dropdown-content'>
         {items.map((item, index) => (
           <span key={item + index}>{item}</span>
         ))}
@@ -29,6 +30,7 @@ export function Dropdown({ title, content }) {
 }
 
 Dropdown.propTypes = {
+  size: PropTypes.string,
   title: PropTypes.string,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };

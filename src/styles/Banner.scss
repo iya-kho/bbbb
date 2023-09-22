@@ -3,7 +3,7 @@
 .banner {
   max-width: 1240px;
   height: 223px;
-  border-radius: 25px;
+  @include borderRadiusBig;
   color: #fff;
   font-size: 48px;
   background-position: center center;
@@ -42,7 +42,7 @@
       transform: translate(0, -50%);
     }
   }
-  &--home {
+  &-home {
     background-image: url('../assets/images/banner-home.jpg');
     &:after {
       content: 'Chez vous, partout et ailleurs';
@@ -55,7 +55,7 @@
       }
     }
   }
-  &--about{
+  &-about{
     background-image: url('../assets/images/banner-about.jpg');
 
   }

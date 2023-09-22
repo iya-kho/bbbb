@@ -1,0 +1,24 @@
+@use './utils.scss' as *;
+
+.tagsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 115px);
+  gap: 10px;
+  @include mobile {
+    grid-template-columns: repeat(auto-fill, 85px);
+  }
+  &-item {
+    padding: 5px;
+    background-color: $main-color;
+    @include borderRadiusSmall;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}

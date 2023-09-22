@@ -1,17 +1,18 @@
 import { PropTypes } from 'prop-types';
+import '../styles/TagsContainer.scss';
 
-export function TagContainer({ content }) {
+export function TagsContainer({ content }) {
   const items = [].concat(content);
   return (
     <div className="tagsContainer">
       {items.map((item, index) => (
-        <span key={item + index}>{item}</span>
+        <div key={item + index} className='tagsContainer-item'>{item}</div>
       ))}
     </div>
   );
 }
 
-TagContainer.propTypes = {
+TagsContainer.propTypes = {
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 

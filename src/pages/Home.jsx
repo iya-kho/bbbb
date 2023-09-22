@@ -6,7 +6,7 @@ export function Home() {
   return (
     <main className="width-margins">
       <h1>Appartements à louer</h1>
-      <Banner className="banner--home" text="" />
+      <Banner className="banner-home" text="" />
       <section id="apartsContainer">
         {apartmentsData.map(item => (
           <ApartCard key={item.id} apartInfo={item} />
