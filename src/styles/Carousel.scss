@@ -42,12 +42,10 @@
   svg {
     width: 80px;
     height: 80px;
+    fill: #fff;
     @include mobile {
       width: 24px;
       height: 24px;
-    }
-    path {
-      fill: #fff;
     }
   }
   &-back {

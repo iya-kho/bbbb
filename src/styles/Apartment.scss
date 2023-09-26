@@ -3,6 +3,7 @@
 .apartInfo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 24px;
   @include mobile {
     flex-direction: column;
@@ -16,6 +17,7 @@
       @include mobile {
         font-size: 18px;
         margin-bottom: 5px;
+        width: 100%;
       }
     }
     .location {
@@ -28,24 +30,88 @@
     }
   }
   &-hostRating {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     @include mobile {
       margin-top: 16px;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  &-hostInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 27px;
+    @include mobile {
+      margin-bottom: 0;
+    }
+    .hostName {
+      font-size: 18px;
+      color: $main-color;
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+    .hostPic-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin-left: 10px;
+      @include mobile {
+        width: 32px;
+        height: 32px;
+      }
+      img {
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &-rating {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: #e3e3e3;
+      @include mobile {
+        width: 13px;
+        height: 13px;
+      }
+    }
+    .star-color {
+      fill: $main-color;
     }
   }
 }
 
 #apartPage {
-  .dropdown {
-    margin-bottom: 50px;
-    &-content {
-      height: 200px;
-    }
-  }
   .descriptionEquipment {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
     @include mobile {
+      margin-bottom: 27px;
       flex-direction: column;
+    }
+  }
+  .dropdown {
+    &:first-child {
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+    .dropdown-content {
+      height: calc(100% - 50px);
+      @include mobile {
+        height: auto;
+      }
     }
   }
 }

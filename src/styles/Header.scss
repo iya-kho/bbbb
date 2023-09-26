@@ -26,9 +26,15 @@ header {
     text-decoration: underline;
   }
   svg {
+    fill: $main-color;
+    width: 210px;
+    height: 68px;
     @include mobile {
       width: 145px;
-      height: auto;
+      height: 47px;
+    }
+    @media (max-width: 330px) {
+      width: 120px;
     }
   }
 }
