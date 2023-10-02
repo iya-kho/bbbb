@@ -1,0 +1,23 @@
+@use 'utils.scss' as *;
+
+.about {
+  .dropdown {
+    margin: 0 auto 30px;
+    &:last-of-type {
+      margin-bottom: 38px;
+      @include mobile {
+        margin: 0 auto 20px;
+      }
+    }
+    @include mobile {
+      margin: 0 auto 20px;
+    }
+  }
+
+  .banner {
+    margin-bottom: 38px;
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import '../styles/Carousel.scss';
 
 export function Carousel({ pics }) {
   const [activePicIndex, updateActivePicIndex] = useState(0);
+
   function clickBack() {
     if (activePicIndex === 0) {
       updateActivePicIndex(pics.length - 1);

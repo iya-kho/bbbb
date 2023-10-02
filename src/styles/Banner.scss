@@ -1,12 +1,13 @@
 @use './utils.scss' as *;
 
 .banner {
-  max-width: 1240px;
+  width: 100%;
   height: 223px;
   @include borderRadiusBig;
   color: #fff;
   font-size: 48px;
   background-position: center center;
+  background-size: cover;
   text-align: center;
   margin: 0 auto;
   position: relative;

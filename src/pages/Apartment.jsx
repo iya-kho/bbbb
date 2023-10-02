@@ -12,21 +12,21 @@ export function Apartment() {
   for (let i = 0; i < maxRating; i++) {
     if (i < apartInfo.rating) {
       rating.push(
-        <svg>
-          <use className="star-color"  href={sprite + '#svg-star'} />
+        <svg key={i}>
+          <use className="star-color" href={sprite + '#svg-star'} />
         </svg>
       );
     } else {
       rating.push(
-        <svg>
-          <use href={sprite + '#svg-star'} />
+        <svg key={i}>
+          <use key={i} href={sprite + '#svg-star'} />
         </svg>
       );
     }
   }
 
   return (
-    <div id="apartPage" className="width-margins">
+    <div className="apartPage width-margins">
       <Carousel pics={apartInfo.pictures} />
       <div className="apartInfo">
         <div className="apartInfo-titleLocTags">
@@ -36,7 +36,7 @@ export function Apartment() {
         </div>
         <div className="apartInfo-hostRating">
           <div className="apartInfo-hostInfo">
-            <span className='hostName'>{apartInfo.host.name}</span>
+            <span className="hostName">{apartInfo.host.name}</span>
             <div className="hostPic-wrap">
               <img src={apartInfo.host.picture} alt="Photo of the host" />
             </div>

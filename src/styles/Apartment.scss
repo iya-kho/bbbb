@@ -11,6 +11,10 @@
   }
   &-titleLocTags {
     color: $main-color;
+    width: 60%;
+    @include mobile {
+      width: 100%;
+    }
     h3 {
       font-size: 36px;
       line-height: 142%;
@@ -32,7 +36,7 @@
   &-hostRating {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     @include mobile {
       margin-top: 16px;
       flex-direction: row-reverse;
@@ -91,27 +95,12 @@
   }
 }
 
-#apartPage {
-  .descriptionEquipment {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    @include mobile {
-      margin-bottom: 27px;
-      flex-direction: column;
-    }
-  }
-  .dropdown {
-    &:first-child {
-      @include mobile {
-        margin-bottom: 20px;
-      }
-    }
-    .dropdown-content {
-      height: calc(100% - 50px);
-      @include mobile {
-        height: auto;
-      }
-    }
+.descriptionEquipment {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  @include mobile {
+    margin-bottom: 27px;
+    flex-direction: column;
   }
 }

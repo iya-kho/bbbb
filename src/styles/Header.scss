@@ -1,11 +1,13 @@
 @use './utils.scss' as *;
 
 header {
+  height: $header-height;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 45px 0 50px;
   @include mobile {
+    height: $header-height-mobile;
     padding: 20px 0 27px;
   }
   a {

@@ -14,8 +14,8 @@
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": 0,
-    "quotes": ["error", "single"],
-    "avoidEscape": 0,
+    "quotes": ["warning", "single"],
+    "avoidEscape": true,
     "allowTemplateLiterals": true,
     "semi": ["error", "always"],
     "react/react-in-jsx-scope": "off",

@@ -1,6 +1,10 @@
 $main-color: #FF6060;
-
 $mobile-width: 650px;
+$header-height: 163px;
+$header-height-mobile: 94px;
+$footer-height: 228px;
+$footer-height-mobile: 184px;
+
 
 @mixin mobile {
   @media (max-width: $mobile-width) {
@@ -14,4 +18,8 @@ $mobile-width: 650px;
 
 @mixin borderRadiusSmall {
   border-radius: 10px;
+}
+
+@mixin dropdownTransition {
+  transition: all 0.5s linear;
 }
