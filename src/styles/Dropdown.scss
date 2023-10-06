@@ -14,7 +14,7 @@
       height: 15px;
       fill: #fff;
       cursor: pointer;
-      // @include dropdownTransition;
+      @include dropdownTransition;
     }
   }
   .dropdown-content {
@@ -25,16 +25,9 @@
     border-radius: 0 0 5px 5px;
     line-height: 150%;
     height: 0;
-    // transition-property: height;
-    // transition-duration: 0.5s;
     transform: scaleY(0);
     transform-origin: 50% 0%;
-    // @include dropdownTransition;
-    // p {
-    //   height: 0;
-    //   transition-property: height;
-    //   transition-duration: 0.5s;
-    // }
+    @include dropdownTransition;
   }
   &_large {
     max-width: 1024px;
@@ -83,7 +76,7 @@
   }
 }
 
-.apartPage {  
+.apartPage {
   .dropdown {
     &:first-child {
       @include mobile {

@@ -1,10 +1,9 @@
-$main-color: #FF6060;
+$main-color: #ff6060;
 $mobile-width: 650px;
 $header-height: 163px;
 $header-height-mobile: 94px;
 $footer-height: 228px;
 $footer-height-mobile: 184px;
-
 
 @mixin mobile {
   @media (max-width: $mobile-width) {
@@ -21,5 +20,14 @@ $footer-height-mobile: 184px;
 }
 
 @mixin dropdownTransition {
-  transition: all 0.5s linear;
+  transition: all 0.4s linear;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

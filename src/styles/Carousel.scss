@@ -7,9 +7,15 @@
   @include mobile {
     margin-bottom: 15px;
   }
-  &-slide {
+  &-container {
     height: 415px;
+    display: flex;
+    overflow: hidden;
+  }
+  &-slide {
     display: none;
+    min-width: 100%;
+    height: 100%;
     @include mobile {
       height: 255px;
     }
@@ -20,24 +26,28 @@
       @include borderRadiusBig;
     }
   }
-  .pic-number {
-    display: none;
-    position: absolute;
-    bottom: 6%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 18px;
-    color: #fff;
-  }
+
   .active {
     display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
   }
 }
 
+.pic-number {
+  display: none;
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #fff;
+}
 .arrow {
   display: none;
   cursor: pointer;
   position: absolute;
+  z-index: 1;
   top: 50%;
   transform: translateY(-50%);
   svg {

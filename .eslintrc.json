@@ -15,7 +15,7 @@
     "indent": ["error", 2],
     "linebreak-style": 0,
     "quotes": ["warning", "single"],
-    "avoidEscape": true,
+    "avoidEscape": 0,
     "allowTemplateLiterals": true,
     "semi": ["error", "always"],
     "react/react-in-jsx-scope": "off",
