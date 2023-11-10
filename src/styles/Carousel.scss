@@ -11,6 +11,9 @@
     height: 415px;
     display: flex;
     overflow: hidden;
+    @include mobile {
+    height: 255px;
+  }
   }
   &-slide {
     display: none;
