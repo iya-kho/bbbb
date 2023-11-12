@@ -25,6 +25,8 @@ export function Apartment() {
     }
   }
 
+  const nameSplit = apartInfo.host.name.split(' ');
+
   return (
     <div className="apartPage width-margins">
       <Carousel pics={apartInfo.pictures} />
@@ -36,7 +38,10 @@ export function Apartment() {
         </div>
         <div className="apartInfo-hostRating">
           <div className="apartInfo-hostInfo">
-            <span className="hostName">{apartInfo.host.name}</span>
+            <div className="hostName">
+              <span>{nameSplit[0]}</span>
+              <span>{nameSplit[1]}</span>
+            </div>
             <div className="hostPic-wrap">
               <img src={apartInfo.host.picture} alt="Photo of the host" />
             </div>

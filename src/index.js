@@ -9,14 +9,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Header/>
+      <Header />
       <Routes>
         <Route index element={<Home />}></Route>
-        <Route path="/apartment" element={<Apartment />}></Route>
+        <Route path="/apartment/:id" element={<Apartment />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   </React.StrictMode>
 );
