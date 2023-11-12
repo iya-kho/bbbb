@@ -1,11 +1,17 @@
 import { useLocation } from 'react-router-dom';
 import { Dropdown, TagsContainer, Carousel } from '../components';
+import { Error } from './Error';
 import sprite from '../assets/icons/sprite.svg';
 import '../styles/Apartment.scss';
 
 export function Apartment() {
   const location = useLocation();
   const apartInfo = location.state;
+
+  if (!apartInfo) {
+    return <Error />;
+  }
+
   const maxRating = 5;
   let rating = [];
 
