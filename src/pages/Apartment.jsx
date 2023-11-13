@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { Dropdown, TagsContainer, Carousel } from '../components';
 import { Error } from './Error';
 import sprite from '../assets/icons/sprite.svg';
@@ -8,7 +8,9 @@ export function Apartment() {
   const location = useLocation();
   const apartInfo = location.state;
 
-  if (!apartInfo) {
+  const linkParams = useParams();
+
+  if (!apartInfo || apartInfo.id != linkParams.id) {
     return <Error />;
   }
 
