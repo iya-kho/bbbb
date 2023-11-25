@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kasa-apartments/static/css/main.c6401a05.css",
+    "main.js": "/kasa-apartments/static/js/main.973a2114.js",
+    "static/media/banner-about.jpg": "/kasa-apartments/static/media/banner-about.c9f0f60d29c9bf698dfa.jpg",
+    "static/media/banner-home.jpg": "/kasa-apartments/static/media/banner-home.f4962aebe70eb02c8a7e.jpg",
+    "static/media/sprite.svg": "/kasa-apartments/static/media/sprite.02390d44598087e5ca949fc89c0e4e42.svg",
+    "index.html": "/kasa-apartments/index.html",
+    "main.c6401a05.css.map": "/kasa-apartments/static/css/main.c6401a05.css.map",
+    "main.973a2114.js.map": "/kasa-apartments/static/js/main.973a2114.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6401a05.css",
+    "static/js/main.973a2114.js"
+  ]
+}
