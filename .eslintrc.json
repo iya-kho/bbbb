@@ -3,6 +3,7 @@
     "browser": true,
     "node": true
   },
+  "root": true,
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
     "sourceType": "module",
@@ -17,7 +18,7 @@
     "linebreak-style": 0,
     "quotes": [0, "single"],
     "avoidEscape": 0,
-    "allowTemplateLiterals": true,
+    "allowTemplateLiterals": 0,
     "semi": ["error", "always"],
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "off",
